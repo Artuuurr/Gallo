@@ -1,11 +1,10 @@
 import './App.css'
+import Homepage from './components/layout/Homepage'
 
 function App() {
 	return (
 		<>
-			<header></header>
-			<main></main>
-			<footer></footer>
+			<Homepage />
 		</>
 	)
 }
