@@ -14,7 +14,23 @@ body {
 	color: #fff;
 	padding: 40px;
 	border-radius: 12px;
-	width: max-content;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1400px;
+	margin: 0 auto;
+	gap: 150px;
+	margin-top: 205px;
+	height: 100%;
+}
+
+.boost-calculator__left {
+	width: 50%;
+}
+
+.boost-calculator__right {
+	width: 50%;
+	height: 100%;
 }
 
 .boost-calculator__title {
@@ -24,14 +40,14 @@ body {
 
 .boost-calculator__description {
 	font-size: 24px;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 }
 
 .boost-calculator__game-selector {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 37px;
+	margin-bottom: 38px;
 }
 
 .boost-calculator__arrow-button {
@@ -45,11 +61,15 @@ body {
 .boost-calculator__game-name {
 	font-size: 50px;
 	font-weight: bold;
-	margin: 0 20px;
+	margin: 0 15px;
+	word-wrap: break-word;
+	text-align: center;
+	width: 230px;
 }
 
 .boost-calculator__range-selector {
 	margin-top: 20px;
+	max-width: 510px;
 }
 
 .boost-calculator__range-label {
@@ -65,14 +85,34 @@ body {
 }
 
 .boost-calculator__input {
-	width: 219px;
-	height: 53px;
-	padding: 10px;
+	width: 220px;
+	height: 54px;
+	padding: 8px;
 	border-radius: 8px;
 	border: none;
 	font-size: 24px;
 	background-color: rgba(230, 66, 79, 0.08);
 	border: 1px solid rgba(255, 255, 255, 0.29);
+}
+
+.boost-calculator__input:hover {
+	border-color: #ffff;
+	background-color: rgba(230, 66, 79, 0.08);
+}
+
+.boost-calculator__input:focus {
+	border-color: #ffff;
+	background-color: rgba(70, 41, 44, 0.483);
+}
+
+.boost-calculator__input option {
+	padding: 20px;
+	font-size: 24px;
+	background-color: #10061e;
+}
+
+.boost-calculator__input option:checked {
+	background-color: rgba(230, 66, 79, 0.01);
 }
 
 .boost-calculator__range {
@@ -82,26 +122,59 @@ body {
 	-webkit-appearance: none;
 }
 
-.boost-calculator__range::-webkit-slider-runnable-track {
-	height: 2px;
-	background: #ff5e5e;
+.boost-calculator__range {
+	position: relative;
+	height: 20px;
+}
+
+.thumb {
+	width: 20;
+}
+
+.boost-calculator__range {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to right, red 0%, red 30%, gray 30%, gray 100%);
+	border-radius: 5px;
+	outline: none;
+	position: relative;
 }
 
 .boost-calculator__range::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 14px;
-	height: 14px;
-	background: #e6424f;
+	width: 12px;
+	height: 12px;
 	border-radius: 50%;
+	background: red;
+	cursor: pointer;
+	position: relative;
+}
+
+.boost-calculator__range::-moz-range-thumb {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: red;
+	cursor: pointer;
+}
+
+.boost-calculator__range::-ms-thumb {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: red;
+	cursor: pointer;
 }
 
 .boost-calculator__calculate-button {
-	background-color: #ff5e5e;
+	background-color: #fc4754;
 	border: none;
 	color: white;
-	padding: 14px 33px;
-	font-size: 24px;
+	padding: 15px 34px;
+	font-size: 18px;
 	cursor: pointer;
 	border-radius: 4px;
 	margin-top: 44px;
@@ -115,4 +188,25 @@ body {
 
 .boost-calculator__calculate-button:hover {
 	background-color: #ff4d4d;
+}
+
+.boost-calculator__game-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+option {
+	background: linear-gradient(to right, red 0%, red 30%, gray 30%, gray 100%);
+}
+
+footer {
+	height: 164px;
+	background: rgba(0, 0, 0, 0.22);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 90px;
+	font-size: 24px;
+	font-family: Roboto;
+	gap: 35px;
 }
