@@ -58,6 +58,7 @@ function FormCSGO() {
 	const [activeInput, setActiveInput] = useState('from')
 	const [selectedCharacter, setSelectedCharacter] = useState('')
 	const [selectedAchievement, setSelectedAchievement] = useState('')
+	const [isModalOpen, setIsModalOpen] = useState(false)
 
 	const nextGame = () => {
 		setCurrentGameIndex(prevIndex =>
@@ -100,20 +101,17 @@ function FormCSGO() {
 	}
 
 	const calculatePrice = () => {
-		// Функция расчета цены
+		// Логика расчета цены
 		console.log('Calculating price for range:', range)
-		if (games[currentGameIndex].name === 'Apex') {
-			console.log(
-				'Персонаж:',
-				selectedCharacter,
-				'Ачивка:',
-				selectedAchievement
-			)
-		}
+		setIsModalOpen(true) // Открываем модалку
+	}
+
+	const closeModal = () => {
+		setIsModalOpen(false)
 	}
 
 	return (
-		<div className='boost-calculator'>
+		<div className='boost-calculator' id='bust'>
 			<div className='boost-calculator__left'>
 				<h2 className='boost-calculator__title'>Выберите игру и буст</h2>
 				<p className='boost-calculator__description'>
@@ -268,6 +266,66 @@ function FormCSGO() {
 						>
 							Рассчитать цену
 						</button>
+						{isModalOpen && (
+							<div className='modal'>
+								<div className='modal-content'>
+									<button className='close-button' onClick={closeModal}>
+										&times;
+									</button>
+									<h3 className='model-title'>Расчётная стоимость буста:</h3>
+									<h2 className='model-price'>1050 р</h2>
+									<form>
+										<div className='name_email'>
+											<div className='form-group'>
+												<label className='form-label'>Имя</label>
+												<input
+													type='text'
+													className='input-field'
+													placeholder='Введите ваше имя'
+												/>
+												<span className='Name'></span>
+											</div>
+											<div className='form-group'>
+												<label className='form-label'>
+													Email (обязательно)
+												</label>
+												<input
+													type='email'
+													className='input-field'
+													placeholder='Email address'
+												/>
+												<span className='Email'></span>
+											</div>
+										</div>
+										<div className='form-group'>
+											<label className='form-label special-m'>
+												Ссылка на соц. сеть
+												<br />
+												(необязательно)
+											</label>
+											<input
+												type='text'
+												className='input-field'
+												placeholder='vk.com'
+											/>
+											<span className='Network'></span>
+										</div>
+										<div className='form-group'>
+											<label className='form-label margB'>
+												Уточнения для связи:
+											</label>
+											<textarea
+												className='textarea-field'
+												placeholder='Комментарии...'
+											></textarea>
+										</div>
+										<button type='submit' className='submit-button'>
+											Отправить
+										</button>
+									</form>
+								</div>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>

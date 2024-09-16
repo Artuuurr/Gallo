@@ -9,9 +9,11 @@ function Header() {
 					<div>
 						<span className='nameSite'>GALLO</span>
 					</div>
-					<button type='button' className='headBtn'>
-						Купить буст
-					</button>
+					<a href='#bust'>
+						<button type='button' className='headBtn'>
+							Купить буст
+						</button>
+					</a>
 				</div>
 			</header>
 		</>
