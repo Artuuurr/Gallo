@@ -113,8 +113,10 @@ function FormCSGO() {
 	return (
 		<div className='boost-calculator' id='bust'>
 			<div className='boost-calculator__left'>
-				<h2 className='boost-calculator__title'>Выберите игру и буст</h2>
-				<p className='boost-calculator__description'>
+				<h2 className='boost-calculator__title roboto-bold'>
+					Выберите игру и буст
+				</h2>
+				<p className='boost-calculator__description roboto-light'>
 					У каждой игры своя единица буста, в зависимости
 					<br /> от игры и количества единиц мы поможем вам
 					<br /> расчитать цену.
@@ -124,7 +126,7 @@ function FormCSGO() {
 					<button onClick={prevGame} className='boost-calculator__arrow-button'>
 						{'<'}
 					</button>
-					<span className='boost-calculator__game-name'>
+					<span className='boost-calculator__game-name roboto-bold'>
 						{games[currentGameIndex].name}
 					</span>
 					<button onClick={nextGame} className='boost-calculator__arrow-button'>
@@ -132,7 +134,7 @@ function FormCSGO() {
 					</button>
 				</div>
 
-				<div className='boost-calculator__range-selector'>
+				<div className='boost-calculator__range-selector roboto-light'>
 					{games[currentGameIndex].name === 'Apex' ? (
 						<>
 							<p className='boost-calculator__range-label'>Выбрать ранг:</p>
@@ -262,7 +264,7 @@ function FormCSGO() {
 					<div className='wrapBtn'>
 						<button
 							onClick={calculatePrice}
-							className='boost-calculator__calculate-button'
+							className='boost-calculator__calculate-button roboto-medium'
 						>
 							Рассчитать цену
 						</button>

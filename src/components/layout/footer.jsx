@@ -4,7 +4,7 @@ import FooterIcon from '../../../public/img/footerIcon.png'
 function Footer() {
 	return (
 		<>
-			<footer>
+			<footer className='roboto-medium'>
 				<img src={FooterIcon} alt='Logo' />
 				<p>vk.com/purpur</p>
 			</footer>

@@ -10,7 +10,7 @@ function Header() {
 						<span className='nameSite'>GALLO</span>
 					</div>
 					<a href='#bust'>
-						<button type='button' className='headBtn'>
+						<button type='button' className='headBtn roboto-medium'>
 							Купить буст
 						</button>
 					</a>
