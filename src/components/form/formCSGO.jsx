@@ -11,7 +11,7 @@ function FormCSGO() {
 	// Список игр с изображениями
 	const games = [
 		{ name: 'CS 2', unit: 'Эло', image: cs2Image },
-		{ name: 'War Zone', unit: 'Рейтинг', image: warzoneImage },
+		{ name: 'WarZone', unit: 'Рейтинг', image: warzoneImage },
 		{ name: 'DOTA 2', unit: 'mmr', image: dota2Image },
 		{ name: 'Valorant', unit: 'звание', image: valorantImage },
 		{ name: 'Apex', unit: 'ранг', image: apexImage },
