@@ -113,3 +113,72 @@ header {
 	z-index: -2;
 	margin-top: -95px;
 }
+
+
+@media (max-width: 768px) {
+  .headBtn {
+    font-size: 18px;
+    width: 130px;
+    height: 48px;
+  }
+
+  .nameSite {
+    font-size: 24px;
+    margin: 0 75px;
+  }
+  .wrapHead {
+    margin-top: 40px;
+  }
+
+
+  .wrapLogo {
+    width: 130px;
+    height: 48px;
+  }
+
+  .sectionMain {
+    padding-top: 260px;
+  }
+
+  .mainpich {
+    width: 90%;
+    top: 100px;
+  }
+
+  .maintext {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .shine2 {
+    height: 100%;
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headBtn {
+    font-size: 16px;
+    width: 110px;
+    height: 40px;
+  }
+
+  .wrapLogo {
+    width: 110px;
+    height: 40px;
+  }
+
+  .sectionMain {
+    padding-top: 300px;
+  }
+
+  .mainpich {
+    width: 100%;
+    top: 80px;
+  }
+
+  .maintext {
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+}
